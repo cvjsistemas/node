@@ -53,7 +53,17 @@
       window.location = '/<%= ruta %>'
     })
   </script>
-<% } %>
+<% } else if(alert =='unauthorized') { %>
+  <script>
+    Swal.fire({
+      title: 'Error',
+      text:'Usuario no autenticado',
+      icon:'error',
+      showConfirmButton: false,
+      timer: 1000
+    });
+  </script>
+  <% } %>
 
 
 

@@ -23,8 +23,7 @@ const authorization = (req, res, next) => {
 
 
     } else{
-       //res.send('No hay cookie');
-       res.redirect('/login');
+       res.status(201).render('login', { alert : 'unauthorized' } );
     }
 
   
